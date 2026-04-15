@@ -110,7 +110,7 @@ export class GameOverPanel {
     if (height) {
       this.canvasDimensions.height = height;
     }
-    this.currentFrame = animConfig.frames.length - 1;
+    this.currentFrame = 0;
   }
 
   private drawGameOverText(

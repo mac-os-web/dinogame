@@ -42,25 +42,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-white p-6 dark:bg-neutral-900">
-      <header className="flex flex-col items-center gap-2">
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-100">
-          🦖 T-Rex Playground
-        </h1>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400">
-          Space / ↑ : jump &nbsp;·&nbsp; ↓ : duck &nbsp;·&nbsp; Enter : restart
-        </p>
-      </header>
-
+    <div className="flex min-h-screen items-center justify-center bg-white dark:bg-neutral-900">
       <div
         id={CONTAINER_ID}
-        className="relative overflow-hidden rounded-lg border border-neutral-300 shadow-lg dark:border-neutral-600"
-        style={{ width: 600, height: 150 }}
+        className="h-[150px] w-full max-w-[600px]"
       />
-
-      <footer className="text-xs text-neutral-400">
-        Chromium <code>offline.ts</code> 원본 TypeScript 소스 기반
-      </footer>
     </div>
   );
 }
