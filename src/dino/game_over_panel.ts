@@ -13,7 +13,6 @@ import type {Trex} from './trex.js';
 import {getTimeStamp} from './utils.js';
 
 const RESTART_ANIM_DURATION: number = 875;
-const LOGO_PAUSE_DURATION: number = 875;
 const FLASH_ITERATIONS: number = 5;
 
 /**
