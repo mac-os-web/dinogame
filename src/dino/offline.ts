@@ -730,8 +730,8 @@ export class Runner implements ImageSpriteProvider, GameStateProvider,
 
     if (this.hasAudioCuesInternal) {
       this.getGeneratedSoundFx().background();
-      this.containerEl.setAttribute('title', getA11yString(A11yStrings.JUMP));
     }
+    this.containerEl.setAttribute('title', getA11yString(A11yStrings.JUMP));
 
     // Handle tabbing off the page. Pause the current game.
     document.addEventListener(
@@ -1408,9 +1408,9 @@ export class Runner implements ImageSpriteProvider, GameStateProvider,
 
                   this.distanceMeter.getActualDistance(this.highestScore)
                       .toString()));
-      this.containerEl.setAttribute(
-          'title', getA11yString(A11yStrings.ARIA_LABEL));
     }
+    this.containerEl.setAttribute(
+        'title', getA11yString(A11yStrings.ARIA_LABEL));
     this.showSpeedToggle();
     this.disableSpeedToggle(false);
   }

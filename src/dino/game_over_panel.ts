@@ -254,21 +254,8 @@ export class GameOverPanel {
     this.animTimer += deltaTime;
     this.flashTimer += deltaTime;
 
-    // Restart Button
-    if (this.currentFrame === 0 && this.animTimer > LOGO_PAUSE_DURATION) {
-      this.animTimer = 0;
-      this.currentFrame++;
-      this.drawRestartButton();
-    } else if (
-        this.currentFrame > 0 && this.currentFrame < animConfig.frames.length) {
-      if (this.animTimer >= animConfig.msPerFrame) {
-        this.currentFrame++;
-        this.drawRestartButton();
-      }
-    } else if (
-        !this.altGameModeActive &&
-        this.currentFrame === animConfig.frames.length) {
-      this.reset();
+    // Restart Button (애니메이션 비활성화 - 구버전 스프라이트에 프레임 없음)
+    if (!this.altGameModeActive) {
       return;
     }
 
